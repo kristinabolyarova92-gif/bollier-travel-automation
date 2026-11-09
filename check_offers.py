@@ -10,10 +10,12 @@ try:
         timeout=30,
         headers={"User-Agent": "Mozilla/5.0"}
     )
+  
     print("HTTP status:", response.status_code)
-print("Response headers:", dict(response.headers))
-print("Response preview:", response.text[:500])
-response.raise_for_status()
+    print("Response headers:", dict(response.headers))
+    print("Response preview:", response.text[:500])
+    response.raise_for_status()
+
 
     soup = BeautifulSoup(response.text, "html.parser")
 
